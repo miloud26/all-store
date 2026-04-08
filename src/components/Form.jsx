@@ -1898,7 +1898,7 @@ export default function Form({ id }) {
       data.append("prix", `${+price * quantity + +delevery}`);
 
       await fetch(
-        "https://script.google.com/macros/s/AKfycbz82sqnVLddNJrx3W3LNbBwKwtKTCVboNFXnpAxFEIf7MMZHlQfDy6LMAU-BKOvEjfdIA/exec",
+        "https://script.google.com/macros/s/AKfycbwW1Aobh95MVBeO3Mce7STpinrAs8gLic3nXtbBlNfUihiD8j_hUBmd0NQJNcK6dtu52g/exec",
         {
           method: "POST",
           body: data,
