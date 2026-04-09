@@ -3,8 +3,8 @@ import Form from "./components/Form";
 import { data } from "./data";
 import { useEffect, useState } from "react";
 
-function Page02() {
-  const id = "l-2";
+function Page01() {
+  const id = "l-3";
   const { price, name, descImag, themImg, phone, slug } = data.filter(
     (item) => item?.id === id,
   )[0];
@@ -216,4 +216,4 @@ function Page02() {
   );
 }
 
-export default Page02;
+export default Page01;

@@ -11,4 +11,16 @@ export const data = [
     descImag: "https://i.ibb.co/VW63C0QS/3.webp",
     themImg: "https://i.ibb.co/TD5w28zh/electroneque.webp",
   },
+  {
+    id: "l-3",
+    name: "Ensemble Jupe ✨",
+    slug: "",
+    phone: "",
+    price: "5900",
+    delevery: "500",
+    clr: ["Noir", "Beige", "Marron", "Rose", "Blanc", "Blue", "Rouge", "Vert"],
+    size: [],
+    descImag: "https://i.ibb.co/k2xvYghf/output.webp",
+    themImg: "https://i.ibb.co/XZ2ncR10/1.png",
+  },
 ];
