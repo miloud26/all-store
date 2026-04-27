@@ -36,4 +36,19 @@ export const data = [
     themImg:
       "https://i.ibb.co/kV5Hk1gb/Screenshot-from-2026-04-23-12-10-12.png",
   },
+  {
+    id: "l-5",
+    name: "✨ جهاز قياس ضغط الدم ",
+    slug: "",
+    phone: "",
+    price: "5900",
+    delevery: "600",
+    clr: [],
+    size: [],
+    descImag1: "https://i.ibb.co/6ckyW6vS/part-1.png",
+    descImag2: "https://i.ibb.co/PzW35R67/part-2.png",
+    descImag3: "https://i.ibb.co/5WXFhB62/part-3.png",
+    themImg:
+      "https://i.ibb.co/TBZVHpTt/Chat-GPT-Image-Apr-27-2026-02-31-20-PM.png",
+  },
 ];
