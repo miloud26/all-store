@@ -42,7 +42,7 @@ export const data = [
     slug: "",
     phone: "",
     price: "4200",
-    delevery: "500",
+    delevery: "حسب الولاية",
     clr: [],
     size: [],
     descImag1: "https://i.ibb.co/6ckyW6vS/part-1.png",
