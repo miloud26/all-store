@@ -1895,7 +1895,14 @@ export default function Form({ id }) {
       data.append("adress", adress);
       data.append("quantity", quantity.toString());
       data.append("model", `${modelColr} / ${modelSize}`);
-      data.append("prix", `${+price * quantity + +delevery}`);
+      data.append(
+        "prix",
+        `${
+          typeof +delevery === "number"
+            ? Number(price) * Number(quantity) + Number(delevery)
+            : Number(price) * Number(quantity)
+        }`,
+      );
 
       await fetch(
         "https://script.google.com/macros/s/AKfycbwW1Aobh95MVBeO3Mce7STpinrAs8gLic3nXtbBlNfUihiD8j_hUBmd0NQJNcK6dtu52g/exec",
@@ -2125,7 +2132,7 @@ export default function Form({ id }) {
                 id="priceDelevery"
                 sx={{ fontWeight: "bold", fontSize: "22px" }}
               >
-                {delevery} دج
+                {typeof +delevery === "number" ? `${delevery} دج` : delevery}
               </Typography>
             </Box>
             <Box
@@ -2144,7 +2151,9 @@ export default function Form({ id }) {
                 id="total"
                 sx={{ fontWeight: "bold", fontSize: "22px" }}
               >
-                {+price * quantity + +delevery} دج
+                {typeof +delevery === "number"
+                  ? Number(price) * Number(quantity) + Number(delevery) + " دج"
+                  : Number(price) * Number(quantity) + " دج"}
               </Typography>
             </Box>
           </Box>
