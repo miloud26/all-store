@@ -1821,7 +1821,7 @@ export default function Form({ id }) {
   const [delevry, setDelevery] = useState(0);
   const phoneInput = useRef(null);
 
-  const { clr, size, price, delevery } = data.filter(
+  const { clr, size, price, delevery, url } = data.filter(
     (item) => item.id === id,
   )[0];
 
@@ -1898,19 +1898,16 @@ export default function Form({ id }) {
       data.append(
         "prix",
         `${
-          typeof +delevery === "number"
+          delevery.trim() !== "" && !isNaN(Number(delevery))
             ? Number(price) * Number(quantity) + Number(delevery)
             : Number(price) * Number(quantity)
         }`,
       );
 
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbwW1Aobh95MVBeO3Mce7STpinrAs8gLic3nXtbBlNfUihiD8j_hUBmd0NQJNcK6dtu52g/exec",
-        {
-          method: "POST",
-          body: data,
-        },
-      );
+      await fetch(url, {
+        method: "POST",
+        body: data,
+      });
 
       setBtnDisebled(false);
 
