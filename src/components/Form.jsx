@@ -1934,6 +1934,7 @@ export default function Form({ id }) {
   //console.log(window.location.href[window.location.href.length - 1]);
 
   localStorage.setItem("baseURL", window.location.pathname);
+  console.log(typeof Number(delevery));
   console.log(delevry);
   return (
     <Box>
@@ -2132,7 +2133,9 @@ export default function Form({ id }) {
                 id="priceDelevery"
                 sx={{ fontWeight: "bold", fontSize: "22px" }}
               >
-                {typeof +delevery === "number" ? `${delevery} دج` : delevery}
+                {delevery.trim() !== "" && !isNaN(Number(delevery))
+                  ? `${delevery} دج`
+                  : `${delevery}`}
               </Typography>
             </Box>
             <Box
@@ -2151,9 +2154,9 @@ export default function Form({ id }) {
                 id="total"
                 sx={{ fontWeight: "bold", fontSize: "22px" }}
               >
-                {typeof +delevery === "number"
-                  ? Number(price) * Number(quantity) + Number(delevery) + " دج"
-                  : Number(price) * Number(quantity) + " دج"}
+                {delevery.trim() !== "" && !isNaN(+delevery)
+                  ? `${+price * +quantity + +delevery} دج`
+                  : `${+price * +quantity} دج`}
               </Typography>
             </Box>
           </Box>
