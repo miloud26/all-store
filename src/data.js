@@ -50,6 +50,6 @@ export const data = [
     descImag3: "https://i.ibb.co/5WXFhB62/part-3.png",
     themImg:
       "https://i.ibb.co/TBZVHpTt/Chat-GPT-Image-Apr-27-2026-02-31-20-PM.png",
-    url: "https://script.google.com/macros/s/AKfycbwub5fzg9iWsb5Jthrh9y3J_PD-HaLXxOwE3GhQ9DS04rNoyc_WErNZ4VOzMDODCeQY/exec",
+    url: "https://script.google.com/macros/s/AKfycbz_J2x5pqjLilAGdQdNQpXuweYTxqRutNQtUyDiGc8QS5A9JrYsWc2civ5kznrsGnFzUg/exec",
   },
 ];
