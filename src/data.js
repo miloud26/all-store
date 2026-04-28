@@ -41,7 +41,7 @@ export const data = [
     name: "✨ جهاز قياس ضغط الدم ",
     slug: "",
     phone: "",
-    price: "4200",
+    price: "3800",
     delevery: "حسب الولاية",
     clr: [],
     size: [],
