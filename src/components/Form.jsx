@@ -1799,10 +1799,10 @@ const wilayaInfo = wilayaCommuneInfo.map((item) => {
   const { id, name } = item;
   return { id, name };
 });
-const priceDelevry = wilayaCommuneInfo.slice(1).map((item) => {
+/*const priceDelevry = wilayaCommuneInfo.slice(1).map((item) => {
   const { id, name, del } = item;
   return { id, name, del };
-});
+});*/
 
 export default function Form({ id }) {
   const TOKEN = process.env.REACT_APP_TELEGRAM_TOKEN;
@@ -1820,7 +1820,7 @@ export default function Form({ id }) {
   const [modelSize, setModelSize] = useState("");
   const fakeBtn = false;
   const [correctNumber, setCorrectNumber] = useState(false);
-  const [delevry, setDelevery] = useState(0);
+  //const [delevry, setDelevery] = useState(0);
   const phoneInput = useRef(null);
 
   const { clr, size, price, delevery, url } = data.filter(
@@ -1843,10 +1843,10 @@ export default function Form({ id }) {
       }),
     });
   }
-  useEffect(() => {
+  /*  useEffect(() => {
     const price = priceDelevry.filter((item) => item.name === wilaya)[0]?.del;
     setDelevery(price);
-  }, [wilaya]);
+  }, [wilaya]);*/
 
   const handleModel = (e) => {
     e.target.classList.toggle("valid");
