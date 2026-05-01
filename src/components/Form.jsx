@@ -1805,6 +1805,8 @@ const priceDelevry = wilayaCommuneInfo.slice(1).map((item) => {
 });
 
 export default function Form({ id }) {
+  const TOKEN = process.env.REACT_APP_TELEGRAM_TOKEN;
+  console.log(TOKEN);
   const [btnDisebled, setBtnDisebled] = useState(true);
 
   const [purchaise, setPurchaise] = useState(false);
@@ -1830,25 +1832,16 @@ export default function Form({ id }) {
   );
 
   async function sendTelegramOrder() {
-    const message = `
-New Order 🔥
-
-`;
-
-    await fetch(
-      `https://api.telegram.org/bot8785859355:AAE9i6Dx-68dOhbdnMTtPOwjSOeLkJW3z5E/sendMessage`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: 5591540987,
-          text: message,
-          parse_mode: "Markdown",
-        }),
+    await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify({
+        chat_id: 5591540987,
+        text: "New Order 🔥",
+      }),
+    });
   }
   useEffect(() => {
     const price = priceDelevry.filter((item) => item.name === wilaya)[0]?.del;
@@ -1954,8 +1947,7 @@ New Order 🔥
   //console.log(window.location.href[window.location.href.length - 1]);
 
   localStorage.setItem("baseURL", window.location.pathname);
-  console.log(typeof Number(delevery));
-  console.log(delevry);
+
   return (
     <Box>
       {purchaise ? (
