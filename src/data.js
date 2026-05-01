@@ -57,13 +57,13 @@ export const data = [
     name: "Robe Hijab ✨",
     slug: "",
     phone: "",
-    price: "600",
-    delevery: "5900",
+    price: "4700",
+    delevery: "600",
     clr: ["Bleu Nuit", "Orange", "Marron"],
     size: [40, 42, 44, 46, 48],
     descImag1: "https://i.ibb.co/67P4mDg1/1-1.webp",
 
     themImg: "https://i.ibb.co/0pDz0nyQ/1.webp",
-    url: "https://script.google.com/macros/s/AKfycbwHZpE6H3iC-6VAM2Juzf-oBKX4z8GXl7vdvufZJvhaFKVOVW11-dExt772f4Hc5fzaYA/exec",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
 ];

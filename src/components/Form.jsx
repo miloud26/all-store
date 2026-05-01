@@ -1828,6 +1828,28 @@ export default function Form({ id }) {
   const communeInfo = Object.values(
     wilayaCommuneInfo.filter((item) => item.name === wilaya)[0],
   );
+
+  async function sendTelegramOrder() {
+    const message = `
+New Order 🔥
+
+`;
+
+    await fetch(
+      `https://api.telegram.org/bot8785859355:AAE9i6Dx-68dOhbdnMTtPOwjSOeLkJW3z5E/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: 5591540987,
+          text: message,
+          parse_mode: "Markdown",
+        }),
+      },
+    );
+  }
   useEffect(() => {
     const price = priceDelevry.filter((item) => item.name === wilaya)[0]?.del;
     setDelevery(price);
@@ -1924,6 +1946,7 @@ export default function Form({ id }) {
           expire: new Date().getTime() + 2 * 60 * 60 * 1000,
         }),
       );
+      sendTelegramOrder();
     } catch (error) {
       console.log(error);
     }
