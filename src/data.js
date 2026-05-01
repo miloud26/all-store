@@ -52,4 +52,20 @@ export const data = [
       "https://i.ibb.co/TBZVHpTt/Chat-GPT-Image-Apr-27-2026-02-31-20-PM.png",
     url: "https://script.google.com/macros/s/AKfycbz_J2x5pqjLilAGdQdNQpXuweYTxqRutNQtUyDiGc8QS5A9JrYsWc2civ5kznrsGnFzUg/exec",
   },
+  {
+    id: "l-6",
+    name: "✨ Robe Hijab",
+    slug: "",
+    phone: "",
+    price: "600",
+    delevery: "5900",
+    clr: [],
+    size: [],
+    descImag1: "https://i.ibb.co/6ckyW6vS/part-1.png",
+    descImag2: "https://i.ibb.co/PzW35R67/part-2.png",
+    descImag3: "https://i.ibb.co/5WXFhB62/part-3.png",
+    themImg:
+      "https://i.ibb.co/TBZVHpTt/Chat-GPT-Image-Apr-27-2026-02-31-20-PM.png",
+    url: "https://script.google.com/macros/s/AKfycbwHZpE6H3iC-6VAM2Juzf-oBKX4z8GXl7vdvufZJvhaFKVOVW11-dExt772f4Hc5fzaYA/exec",
+  },
 ];
