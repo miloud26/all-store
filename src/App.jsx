@@ -3,6 +3,7 @@ import React, { lazy, useEffect, startTransition, Suspense } from "react";
 import Page03 from "./Page03.jsx";
 import Page04 from "./Page04.jsx";
 import Page06 from "./Page06.jsx";
+import Page07 from "./Page07.jsx";
 
 const Page01 = lazy(() => import("./Page01.jsx"));
 const Page02 = lazy(() => import("./Page02.jsx"));
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/products/page03" element={<Page03 />} />
         <Route path="/products/page04" element={<Page04 />} />
         <Route path="/products/page06" element={<Page06 />} />
+        <Route path="/products/page07" element={<Page07 />} />
       </Routes>
     </Suspense>
   );
