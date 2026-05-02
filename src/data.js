@@ -57,7 +57,7 @@ export const data = [
     name: "Robe Hijab ✨",
     slug: "",
     phone: "",
-    price: "2500",
+    price: "3900",
     delevery: "600",
     clr: ["Bleu Nuit", "Orange", "Marron"],
     size: [40, 42, 44, 46, 48],
