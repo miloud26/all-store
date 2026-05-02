@@ -71,7 +71,7 @@ export const data = [
     name: "Ensemble Femme Élégant ✨",
     slug: "",
     phone: "",
-    price: "4203",
+    price: "4300",
     delevery: "600",
     clr: ["Beige", "Noir"],
     size: [36, 38, 40, 42, 44, 46],
