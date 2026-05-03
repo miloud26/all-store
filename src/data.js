@@ -80,4 +80,18 @@ export const data = [
     themImg: "https://i.ibb.co/Q7J8Fjr1/11.webp",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
+  {
+    id: "l-8",
+    name: "Ensemble Class & Élégant ✨",
+    slug: "",
+    phone: "",
+    price: "4200",
+    delevery: "600",
+    clr: ["Beige", "Noir", "Vert Kaki", "Crevette"],
+    size: [40, 42, 44, 46, 48],
+    descImag1: "https://i.ibb.co/MxvSFws0/output.webp",
+
+    themImg: "https://i.ibb.co/gLkWpwx0/1.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
 ];
