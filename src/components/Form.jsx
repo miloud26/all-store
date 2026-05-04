@@ -1818,6 +1818,7 @@ export default function Form({ id }) {
   const [modelSize, setModelSize] = useState("");
   const fakeBtn = false;
   const [correctNumber, setCorrectNumber] = useState(false);
+  const [isDelevery, setIsDelevery] = useState(false);
   //const [delevry, setDelevery] = useState(0);
   const phoneInput = useRef(null);
 
@@ -1942,374 +1943,406 @@ export default function Form({ id }) {
       console.log(error);
     }
   };
-  //console.log(window.location.href[window.location.href.length - 1]);
+  useEffect(() => {
+    if (
+      wilaya === "Adrar" ||
+      wilaya === "Bechar" ||
+      wilaya === "Tamanrasset" ||
+      wilaya === "Illizi" ||
+      wilaya === "Tindouf" ||
+      wilaya === "Timimoun" ||
+      wilaya === "Bordj Badji Mokhtar" ||
+      wilaya === "In Salah" ||
+      wilaya === "In Guezzam" ||
+      wilaya === "Djanet"
+    ) {
+      setIsDelevery((prev) => !prev);
+    } else {
+      setIsDelevery(false);
+    }
+  }, [wilaya]);
 
   localStorage.setItem("baseURL", window.location.pathname);
 
   return (
     <Box>
-      {purchaise ? (
+      {isDelevery ? (
         <Box margin={"50px 0"}>
           <Typography sx={{ fontSize: "32px", textAlign: "center" }}>
-            لقد تم تقديم طلبك بنجاح سيتم الاتصال بك قريبا لتأكيد طلبيتك
+            نعتدر التوصيل غير متوفر لولايتكم
           </Typography>
           <Typography sx={{ fontSize: "32px", textAlign: "center" }}>
-            شكرا لك
-          </Typography>
-        </Box>
-      ) : fakeBtn ? (
-        <Box margin={"50px 0"}>
-          <Typography sx={{ fontSize: "32px", textAlign: "center" }}>
-            {` غير متوفر الآن ${wilaya}  التوصيل لولايتك `}
-          </Typography>
-          <Typography sx={{ fontSize: "32px", textAlign: "center" }}>
-            نرجوا المعذرة و شكرا
+            شكرا لكم
           </Typography>
         </Box>
       ) : (
-        <form
-          style={{
-            border: "3px rgba(107, 107, 224, 0.623) solid",
-            borderRadius: "8px",
-            padding: "7px",
-            marginTop: "10px",
-            marginBottom: "10px",
-          }}
-          onSubmit={handleSubmitOrder}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexWrap: "wrap",
-            }}
-          >
-            <TextField
-              required
-              sx={{
-                width: "49%",
-                marginBottom: "10px",
-                "@media(max-width:700px)": {
-                  width: "100%",
-                },
-              }}
-              placeholder={"الاسم الكامل"}
-              label={"الاسم الكامل"}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <TextField
-              ref={phoneInput}
-              required
-              type="number"
-              sx={{
-                width: "49%",
-                marginBottom: "10px",
-                "@media(max-width:700px)": {
-                  width: "100%",
-                },
-              }}
-              placeholder={"رقم الهاتف"}
-              label={"رقم الهاتف"}
-              onChange={(e) => setPhone(e.target.value)}
-            />
-            {correctNumber ? (
-              <Typography
-                sx={{
-                  marginTop: "-10px",
-                  textAlign: "center",
-                  width: "60%",
-                  color: "red",
-                  marginBottom: "15px",
-                }}
-              >
-                أدخل رقم هاتف صحيح{" "}
+        <Box>
+          {purchaise ? (
+            <Box margin={"50px 0"}>
+              <Typography sx={{ fontSize: "32px", textAlign: "center" }}>
+                لقد تم تقديم طلبك بنجاح سيتم الاتصال بك قريبا لتأكيد طلبيتك
               </Typography>
-            ) : (
-              ""
-            )}
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexWrap: "wrap",
-            }}
-          >
-            <FormControl fullWidth sx={{ marginBottom: "15px" }}>
-              <InputLabel>{"الولاية"}</InputLabel>
-              <Select
-                sx={{ direction: "ltr" }}
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={wilaya}
-                label="Wilaya"
-                onChange={(e) => setWilaya(e.target.value)}
-              >
-                {wilayaInfo.slice(1).map((item, index) => {
-                  return (
-                    <MenuItem
-                      required
-                      sx={{ direction: "ltr" }}
-                      key={index}
-                      value={item.name}
-                    >
-                      {item.id} - {item.name}
-                    </MenuItem>
-                  );
-                })}
-              </Select>
-            </FormControl>
-            <FormControl fullWidth>
-              <InputLabel>{"البلدية"}</InputLabel>
-              <Select
-                sx={{ direction: "ltr" }}
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={adress}
-                label="Commune"
-                onChange={(e) => setAdress(e.target.value)}
-              >
-                {communeInfo.slice(2).map((item, index) => {
-                  return (
-                    <MenuItem
-                      sx={{ direction: "ltr" }}
-                      key={index}
-                      value={item}
-                    >
-                      {item}
-                    </MenuItem>
-                  );
-                })}
-              </Select>
-            </FormControl>
-          </Box>
-          <Box
-            sx={{
-              padding: "15px",
-              marginTop: "12px",
-              marginBottom: "12px",
-              width: "100%",
-              backgroundColor: "#dbeafe",
-              borderRadius: "12px",
-            }}
-          >
-            <Box
-              sx={{
-                direction: "rtl",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "10px",
-              }}
-            >
-              <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
-                {"سعر المنتج"}
-              </Typography>
-              <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
-                {price} دج
+              <Typography sx={{ fontSize: "32px", textAlign: "center" }}>
+                شكرا لك
               </Typography>
             </Box>
-            <Box
-              sx={{
-                direction: "rtl",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "10px",
-              }}
-            >
-              <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
-                {"الكمية"}
+          ) : fakeBtn ? (
+            <Box margin={"50px 0"}>
+              <Typography sx={{ fontSize: "32px", textAlign: "center" }}>
+                {` غير متوفر الآن ${wilaya}  التوصيل لولايتك `}
               </Typography>
-              <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
-                {quantity}
+              <Typography sx={{ fontSize: "32px", textAlign: "center" }}>
+                نرجوا المعذرة و شكرا
               </Typography>
             </Box>
-            <Box
-              sx={{
-                direction: "rtl",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
+          ) : (
+            <form
+              style={{
+                border: "3px rgba(107, 107, 224, 0.623) solid",
+                borderRadius: "8px",
+                padding: "7px",
+                marginTop: "10px",
                 marginBottom: "10px",
               }}
+              onSubmit={handleSubmitOrder}
             >
-              <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
-                {"سعر التوصيل"}
-              </Typography>
-              <Typography
-                id="priceDelevery"
-                sx={{ fontWeight: "bold", fontSize: "22px" }}
-              >
-                {delevery.trim() !== "" && !isNaN(Number(delevery))
-                  ? `${delevery} دج`
-                  : `${delevery}`}
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                direction: "rtl",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "10px",
-              }}
-            >
-              <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
-                {"المجموع"}
-              </Typography>
-              <Typography
-                id="total"
-                sx={{ fontWeight: "bold", fontSize: "22px" }}
-              >
-                {delevery.trim() !== "" && !isNaN(+delevery)
-                  ? `${+price * +quantity + +delevery} دج`
-                  : `${+price * +quantity} دج`}
-              </Typography>
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, max-content)",
-              gap: "6px",
-              justifyContent: "center", // توسيط الصفوف في الوسط
-            }}
-          >
-            {clr.map((item, i) => (
               <Box
-                key={i}
-                onClick={(e) => {
-                  handleModel(e);
-                  setModelColr(item);
-                }}
                 sx={{
-                  height: "40px",
-                  border: "1px solid red",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  fontWeight: "bold",
-                  padding: "6px 14px",
-                  borderRadius: "12px",
-                  cursor: "pointer",
-                }}
-              >
-                {item}
-              </Box>
-            ))}
-          </Box>
-
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: "repeat(5, max-content)",
-              gap: "4px",
-              justifyContent: "center",
-              marginTop: "25px",
-            }}
-          >
-            {size.map((item, i) => (
-              <Box
-                key={i}
-                onClick={(e) => {
-                  handleModel(e);
-                  setModelSize(item);
-                }}
-                sx={{
-                  height: "44px",
-                  border: "1px solid red",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  fontWeight: "bold",
-                  padding: "4px 10px",
-                  borderRadius: "10px",
-                  cursor: "pointer",
-                }}
-              >
-                {item}
-              </Box>
-            ))}
-          </Box>
-
-          <Box
-            sx={{
-              marginTop: "20px",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <Button
-              disabled={btnDisebled === true ? true : false}
-              sx={{
-                fontWeight: "bold",
-                width: "55%",
-                margin: "8px 2px",
-                color: "#000",
-                backgroundColor: "#dbeafe",
-                "&:hover": {
-                  backgroundColor: "#dbeafe",
-                },
-              }}
-              variant="contained"
-              type="submit"
-            >
-              {"اشتري الان"}
-            </Button>
-            <Box
-              sx={{
-                width: "45%",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                borderRadius: "15px ",
-                padding: "15px",
-              }}
-            >
-              <Button
-                variant="contained"
-                sx={{
-                  fontWeight: "bold",
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  width: "100%",
-                  color: "#000",
-                  backgroundColor: "#dbeafe",
-                  "&:hover": {
-                    backgroundColor: "#dbeafe",
-                  },
-                  marginTop: "0px",
-                  padding: "8px 15px",
+                  flexWrap: "wrap",
                 }}
               >
-                <Typography
-                  sx={{ fontWeight: "bold" }}
-                  onClick={() => setQuantity(+quantity + 1)}
-                >
-                  +
-                </Typography>
-                <Typography sx={{ fontWeight: "bold" }}>{quantity}</Typography>
-                <Typography
-                  sx={{ fontWeight: "bold" }}
-                  onClick={() => {
-                    if (quantity === 1) {
-                      setQuantity(quantity);
-                    } else {
-                      setQuantity(quantity - 1);
-                    }
+                <TextField
+                  required
+                  sx={{
+                    width: "49%",
+                    marginBottom: "10px",
+                    "@media(max-width:700px)": {
+                      width: "100%",
+                    },
+                  }}
+                  placeholder={"الاسم الكامل"}
+                  label={"الاسم الكامل"}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <TextField
+                  ref={phoneInput}
+                  required
+                  type="number"
+                  sx={{
+                    width: "49%",
+                    marginBottom: "10px",
+                    "@media(max-width:700px)": {
+                      width: "100%",
+                    },
+                  }}
+                  placeholder={"رقم الهاتف"}
+                  label={"رقم الهاتف"}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+                {correctNumber ? (
+                  <Typography
+                    sx={{
+                      marginTop: "-10px",
+                      textAlign: "center",
+                      width: "60%",
+                      color: "red",
+                      marginBottom: "15px",
+                    }}
+                  >
+                    أدخل رقم هاتف صحيح{" "}
+                  </Typography>
+                ) : (
+                  ""
+                )}
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  flexWrap: "wrap",
+                }}
+              >
+                <FormControl fullWidth sx={{ marginBottom: "15px" }}>
+                  <InputLabel>{"الولاية"}</InputLabel>
+                  <Select
+                    sx={{ direction: "ltr" }}
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={wilaya}
+                    label="Wilaya"
+                    onChange={(e) => setWilaya(e.target.value)}
+                  >
+                    {wilayaInfo.slice(1).map((item, index) => {
+                      return (
+                        <MenuItem
+                          required
+                          sx={{ direction: "ltr" }}
+                          key={index}
+                          value={item.name}
+                        >
+                          {item.id} - {item.name}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                </FormControl>
+                <FormControl fullWidth>
+                  <InputLabel>{"البلدية"}</InputLabel>
+                  <Select
+                    sx={{ direction: "ltr" }}
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={adress}
+                    label="Commune"
+                    onChange={(e) => setAdress(e.target.value)}
+                  >
+                    {communeInfo.slice(2).map((item, index) => {
+                      return (
+                        <MenuItem
+                          sx={{ direction: "ltr" }}
+                          key={index}
+                          value={item}
+                        >
+                          {item}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                </FormControl>
+              </Box>
+              <Box
+                sx={{
+                  padding: "15px",
+                  marginTop: "12px",
+                  marginBottom: "12px",
+                  width: "100%",
+                  backgroundColor: "#dbeafe",
+                  borderRadius: "12px",
+                }}
+              >
+                <Box
+                  sx={{
+                    direction: "rtl",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginBottom: "10px",
                   }}
                 >
-                  -
-                </Typography>
-              </Button>
-            </Box>
-          </Box>
-        </form>
+                  <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
+                    {"سعر المنتج"}
+                  </Typography>
+                  <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
+                    {price} دج
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    direction: "rtl",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
+                    {"الكمية"}
+                  </Typography>
+                  <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
+                    {quantity}
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    direction: "rtl",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
+                    {"سعر التوصيل"}
+                  </Typography>
+                  <Typography
+                    id="priceDelevery"
+                    sx={{ fontWeight: "bold", fontSize: "22px" }}
+                  >
+                    {delevery.trim() !== "" && !isNaN(Number(delevery))
+                      ? `${delevery} دج`
+                      : `${delevery}`}
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    direction: "rtl",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
+                    {"المجموع"}
+                  </Typography>
+                  <Typography
+                    id="total"
+                    sx={{ fontWeight: "bold", fontSize: "22px" }}
+                  >
+                    {delevery.trim() !== "" && !isNaN(+delevery)
+                      ? `${+price * +quantity + +delevery} دج`
+                      : `${+price * +quantity} دج`}
+                  </Typography>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(4, max-content)",
+                  gap: "6px",
+                  justifyContent: "center", // توسيط الصفوف في الوسط
+                }}
+              >
+                {clr.map((item, i) => (
+                  <Box
+                    key={i}
+                    onClick={(e) => {
+                      handleModel(e);
+                      setModelColr(item);
+                    }}
+                    sx={{
+                      height: "40px",
+                      border: "1px solid red",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      fontWeight: "bold",
+                      padding: "6px 14px",
+                      borderRadius: "12px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {item}
+                  </Box>
+                ))}
+              </Box>
+
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(5, max-content)",
+                  gap: "4px",
+                  justifyContent: "center",
+                  marginTop: "25px",
+                }}
+              >
+                {size.map((item, i) => (
+                  <Box
+                    key={i}
+                    onClick={(e) => {
+                      handleModel(e);
+                      setModelSize(item);
+                    }}
+                    sx={{
+                      height: "44px",
+                      border: "1px solid red",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      fontWeight: "bold",
+                      padding: "4px 10px",
+                      borderRadius: "10px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {item}
+                  </Box>
+                ))}
+              </Box>
+
+              <Box
+                sx={{
+                  marginTop: "20px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Button
+                  disabled={btnDisebled === true ? true : false}
+                  sx={{
+                    fontWeight: "bold",
+                    width: "55%",
+                    margin: "8px 2px",
+                    color: "#000",
+                    backgroundColor: "#dbeafe",
+                    "&:hover": {
+                      backgroundColor: "#dbeafe",
+                    },
+                  }}
+                  variant="contained"
+                  type="submit"
+                >
+                  {"اشتري الان"}
+                </Button>
+                <Box
+                  sx={{
+                    width: "45%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    borderRadius: "15px ",
+                    padding: "15px",
+                  }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      fontWeight: "bold",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      width: "100%",
+                      color: "#000",
+                      backgroundColor: "#dbeafe",
+                      "&:hover": {
+                        backgroundColor: "#dbeafe",
+                      },
+                      marginTop: "0px",
+                      padding: "8px 15px",
+                    }}
+                  >
+                    <Typography
+                      sx={{ fontWeight: "bold" }}
+                      onClick={() => setQuantity(+quantity + 1)}
+                    >
+                      +
+                    </Typography>
+                    <Typography sx={{ fontWeight: "bold" }}>
+                      {quantity}
+                    </Typography>
+                    <Typography
+                      sx={{ fontWeight: "bold" }}
+                      onClick={() => {
+                        if (quantity === 1) {
+                          setQuantity(quantity);
+                        } else {
+                          setQuantity(quantity - 1);
+                        }
+                      }}
+                    >
+                      -
+                    </Typography>
+                  </Button>
+                </Box>
+              </Box>
+            </form>
+          )}
+        </Box>
       )}
     </Box>
   );
