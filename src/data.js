@@ -99,7 +99,7 @@ export const data = [
     name: "Robe D'ete En lin ✨",
     slug: "",
     phone: "",
-    price: "4300",
+    price: "3500",
     delevery: "600",
     clr: ["Vert", "Noir", "Bleu"],
     size: [36, 38, 40, 42, 44, 46],
