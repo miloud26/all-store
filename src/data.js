@@ -101,7 +101,7 @@ export const data = [
     phone: "",
     price: "3500",
     delevery: "600",
-    clr: ["Vert", "Noir", "Bleu"],
+    clr: ["Vert", "Marron", "Bleu"],
     size: [36, 38, 40, 42, 44, 46],
     descImag1: "https://i.ibb.co/XfYVVg8J/output.webp",
 
