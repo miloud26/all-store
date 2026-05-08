@@ -108,4 +108,18 @@ export const data = [
     themImg: "https://i.ibb.co/pjRWqyRF/x.webp",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
+  {
+    id: "l-9",
+    name: "Robe Hijab ✨",
+    slug: "",
+    phone: "",
+    price: "3900",
+    delevery: "600",
+    clr: ["Blanc", "Vert", "Bleu"],
+    size: [38, 40, 42, 44, 46, 48],
+    descImag1: "https://i.ibb.co/Z12DSP0G/output.webp",
+
+    themImg: "https://i.ibb.co/DH58s8VW/1.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
 ];
