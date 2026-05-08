@@ -94,4 +94,18 @@ export const data = [
     themImg: "https://i.ibb.co/gLkWpwx0/1.webp",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
+  {
+    id: "l-9",
+    name: "Robe D'ete En lin ✨",
+    slug: "",
+    phone: "",
+    price: "4300",
+    delevery: "600",
+    clr: ["Vert", "Noir", "Bleu"],
+    size: [36, 38, 40, 42, 44, 46],
+    descImag1: "https://i.ibb.co/XfYVVg8J/output.webp",
+
+    themImg: "https://i.ibb.co/pjRWqyRF/x.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
 ];
