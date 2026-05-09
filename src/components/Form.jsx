@@ -1804,7 +1804,6 @@ const wilayaInfo = wilayaCommuneInfo.map((item) => {
 
 export default function Form({ id }) {
   const TOKEN = process.env.REACT_APP_TELEGRAM_TOKEN;
-  console.log(TOKEN);
   const [btnDisebled, setBtnDisebled] = useState(true);
 
   const [purchaise, setPurchaise] = useState(false);
@@ -1838,7 +1837,7 @@ export default function Form({ id }) {
       },
       body: JSON.stringify({
         chat_id: 5591540987,
-        text: "New Order 🔥",
+        text: `New Order 🔥 \n${document.getElementById("title")?.innerHTML}`,
       }),
     });
   }
@@ -1935,7 +1934,7 @@ export default function Form({ id }) {
         "makeOrder",
         JSON.stringify({
           value: 1,
-          expire: new Date().getTime() + 2 * 60 * 60 * 1000,
+          expire: new Date().getTime() + 24 * 60 * 60 * 1000,
         }),
       );
       sendTelegramOrder();
