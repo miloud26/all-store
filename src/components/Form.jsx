@@ -2200,10 +2200,12 @@ export default function Form({ id }) {
               </Box>
               <Box
                 sx={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(4, max-content)",
-                  gap: "6px",
-                  justifyContent: "center", // توسيط الصفوف في الوسط
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "8px",
+                  width: "100%",
                 }}
               >
                 {clr.map((item, i) => (
@@ -2214,7 +2216,7 @@ export default function Form({ id }) {
                       setModelColr(item);
                     }}
                     sx={{
-                      height: "40px",
+                      minHeight: "40px",
                       border: "1px solid red",
                       display: "flex",
                       justifyContent: "center",
@@ -2223,6 +2225,8 @@ export default function Form({ id }) {
                       padding: "6px 14px",
                       borderRadius: "12px",
                       cursor: "pointer",
+                      whiteSpace: "nowrap",
+                      width: "fit-content",
                     }}
                   >
                     {item}
