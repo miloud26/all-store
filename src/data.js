@@ -137,4 +137,34 @@ export const data = [
       "https://i.ibb.co/qFBW4L1V/Chat-GPT-Image-May-12-2026-03-18-26-AM.webp",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
+  {
+    id: "l-12",
+    name: "Ensemble D'ete 2 Pieces ✨",
+    slug: "",
+    phone: "",
+    price: "4300",
+    delevery: "600",
+    clr: ["Bleu", "Rose", "Beige", "Vert"],
+    size: ["Taille Standard(40-42-44-46)"],
+    descImag1: "https://i.ibb.co/395bFvKg/output.webp",
+
+    themImg:
+      "https://i.ibb.co/LXQC5Y4Q/Chat-GPT-Image-May-16-2026-01-33-25-AM.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
+  {
+    id: "l-13",
+    name: "Ensemble D'ete En Lin ✨",
+    slug: "",
+    phone: "",
+    price: "4300",
+    delevery: "600",
+    clr: ["Bleu", "Rose", "Beige", "Vert"],
+    size: ["Taille Standard(40-42-44-46)"],
+    descImag1: "https://i.ibb.co/ynxQ8rJR/output.webp",
+
+    themImg:
+      "https://i.ibb.co/NdMJDhNY/Chat-GPT-Image-May-16-2026-01-40-50-AM.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
 ];
