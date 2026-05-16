@@ -142,7 +142,7 @@ export const data = [
     name: "Ensemble D'ete 2 Pieces ✨",
     slug: "",
     phone: "",
-    price: "4300",
+    price: "3900",
     delevery: "600",
     clr: ["Bleu", "Rose", "Beige", "Vert"],
     size: ["Taille Standard(40-42-44-46)"],
