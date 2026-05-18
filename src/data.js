@@ -167,4 +167,19 @@ export const data = [
       "https://i.ibb.co/NdMJDhNY/Chat-GPT-Image-May-16-2026-01-40-50-AM.webp",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
+  {
+    id: "l-14",
+    name: "Robe D'ete En lin ✨",
+    slug: "",
+    phone: "",
+    price: "3500",
+    delevery: "600",
+    clr: ["Rose", "Vert clair", "Vert militaire", "Bleu ciel"],
+    size: [40, 42, 44, 46],
+    descImag1: "https://i.ibb.co/Nnm9rVpk/output.webp",
+
+    themImg:
+      "https://i.ibb.co/Dftkp46g/Chat-GPT-Image-May-19-2026-12-10-14-AM.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
 ];
