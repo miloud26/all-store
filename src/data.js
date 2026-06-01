@@ -184,16 +184,17 @@ export const data = [
   },
   {
     id: "l-15",
-    name: "Burkini pour l'été ✨",
+    name: "بوركيني فضفاض للمحجبات ✨",
     slug: "",
     phone: "",
     price: "3900",
     delevery: "600",
     clr: ["Noir"],
     size: ["38-40-42-44", "46-48-50"],
-    descImag1: "https://i.ibb.co/yF8Pk3Hq/output.webp",
+    descImag1: "https://i.ibb.co/WWwqBDkh/merged.webp",
 
-    themImg: "https://i.ibb.co/Y76zwMJn/IMG-8696.webp",
+    themImg:
+      "https://i.ibb.co/fYpNgn3q/Screenshot-from-2026-06-01-23-47-26.png",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
 ];
