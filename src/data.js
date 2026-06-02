@@ -197,4 +197,32 @@ export const data = [
       "https://i.ibb.co/fYpNgn3q/Screenshot-from-2026-06-01-23-47-26.png",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
+  {
+    id: "l-16",
+    name: " عباية عصرية مطروزة ✨",
+    slug: "",
+    phone: "",
+    price: "6900",
+    delevery: "600",
+    clr: ["Noir"],
+    size: ["40-42-44", "46-48"],
+    descImag1: "https://i.ibb.co/C5Grh311/output.webp",
+
+    themImg: "https://i.ibb.co/bgcVKJSR/IMG-7195.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
+  {
+    id: "l-16",
+    name: " عباية عصرية مطروزة ✨",
+    slug: "",
+    phone: "",
+    price: "6900",
+    delevery: "600",
+    clr: ["Noir"],
+    size: ["40-42-44", "46-48"],
+    descImag1: "https://i.ibb.co/bjKMWmHR/output.webp",
+
+    themImg: "https://i.ibb.co/Qv8hrqvx/IMG-8455.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
 ];
