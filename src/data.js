@@ -213,7 +213,7 @@ export const data = [
   },
   {
     id: "l-17",
-    name: " عباية عصرية مطروزة ✨",
+    name: "عباية نسمة 🩵",
     slug: "",
     phone: "",
     price: "6400",
