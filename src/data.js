@@ -212,6 +212,21 @@ export const data = [
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
   {
+    id: "l-17",
+    name: " عباية عصرية مطروزة ✨",
+    slug: "",
+    phone: "",
+    price: "6400",
+    delevery: "600",
+    clr: ["Bleu"],
+    size: ["T1(38-40-42)", "T2(44-46-48)"],
+    descImag1: "https://i.ibb.co/d46T5Pcv/output.webp",
+
+    themImg: "https://i.ibb.co/N2MCbYSL/IMG-8453.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
+
+  {
     id: "l-18",
     name: " عباية اللان الكونفورت ✨",
     slug: "",
