@@ -202,10 +202,10 @@ export const data = [
     name: " عباية عصرية مطروزة ✨",
     slug: "",
     phone: "",
-    price: "6900",
+    price: "6800",
     delevery: "600",
     clr: ["Noir"],
-    size: ["40-42-44", "46-48"],
+    size: ["Taille Standard 38 - 48"],
     descImag1: "https://i.ibb.co/C5Grh311/output.webp",
 
     themImg: "https://i.ibb.co/bgcVKJSR/IMG-7195.webp",
