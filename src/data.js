@@ -232,7 +232,7 @@ export const data = [
       "Jaune poussin",
       "Roz clair",
     ],
-    size: ["Standard 38 - 50"],
+    size: ["Taille Standard 38 - 50"],
     descImag1: "https://i.ibb.co/pjzq0000/output.webp",
 
     themImg: "https://i.ibb.co/1YhJc0TV/2.webp",
