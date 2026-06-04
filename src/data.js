@@ -231,7 +231,7 @@ export const data = [
     name: " عباية اللان الكونفورت ✨",
     slug: "",
     phone: "",
-    price: "6400",
+    price: "5900",
     delevery: "600",
     clr: [
       "Noir",
