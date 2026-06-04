@@ -213,7 +213,7 @@ export const data = [
   },
   {
     id: "l-18",
-    name: "عباية صيفية✨",
+    name: " عباية اللان الكونفورت ✨",
     slug: "",
     phone: "",
     price: "6400",
