@@ -187,7 +187,7 @@ export const data = [
     name: "بوركيني فضفاض للمحجبات ✨",
     slug: "",
     phone: "",
-    price: "3800",
+    price: "3700",
     delevery: "600",
     clr: ["Noir"],
     size: ["38-40-42-44", "46-48-50"],
