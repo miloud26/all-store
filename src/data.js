@@ -151,4 +151,18 @@ export const data = [
     themImg: "https://i.ibb.co/nNSHfd9y/output.webp",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
+  {
+    id: "l-13",
+    name: "Robe D'ete ✨",
+    slug: "",
+    phone: "",
+    price: "2900",
+    delevery: "600",
+    clr: ["Rose", "Blue"],
+    size: ["36", "38", "40", "42", "44", "46"],
+    descImag1: "https://i.ibb.co/N2cZx5wQ/output.webp",
+    themImg:
+      "https://i.ibb.co/Qjcbgg2v/Screenshot-from-2026-07-08-17-31-33.png",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
 ];
