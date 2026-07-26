@@ -191,4 +191,18 @@ export const data = [
     themImg: "https://i.ibb.co/5x8qZSvm/IMG-1584.png",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
+  {
+    id: "l-16",
+    name: "باقة المنتجات الإيطالية الفاخرة + دورة التكوين الاحترافي مع كبار الخبراء",
+    slug: "",
+    phone: "",
+    hashprice: "67600",
+    price: "44000",
+    delevery: "900",
+    clr: [],
+    size: [],
+    descImag1: "https://i.ibb.co/rGqQZ7tm/1.webp",
+    themImg: "https://i.ibb.co/qY0nv5Gt/2.webp",
+    url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
+  },
 ];
