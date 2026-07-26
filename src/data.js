@@ -201,7 +201,7 @@ export const data = [
     delevery: "900",
     clr: [],
     size: [],
-    descImag1: "https://i.ibb.co/rGqQZ7tm/1.webp",
+    descImag1: "https://i.ibb.co/mFXvrjv7/1.webp",
     themImg: "https://i.ibb.co/qY0nv5Gt/2.webp",
     url: "https://script.google.com/macros/s/AKfycbwTmWUg8PQsVio86mZT3GN9rJX7Bu1i5FEOhQX4XdCr7fWN5Caw16dDwUQV-8mxk4A6eg/exec",
   },
