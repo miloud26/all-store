@@ -166,17 +166,29 @@ function Page16() {
             justifyContent="flex-end"
             alignItems="baseline"
             gap={1}
+            direction="rtl"
           >
             <Typography
               sx={{
+                fontSize: "22px",
+                color: "#999",
                 textDecoration: "line-through",
-                color: "#888",
-                fontSize: "24px",
               }}
             >
-              {hashprice} دج
+              دج
             </Typography>
 
+            {/* Current price */}
+            <Typography
+              sx={{
+                fontSize: "22px",
+                color: "#999",
+                textDecoration: "line-through",
+              }}
+            >
+              {hashprice}
+            </Typography>
+            {/* Currency */}
             <Typography
               sx={{
                 fontWeight: "bold",
@@ -184,7 +196,19 @@ function Page16() {
                 color: "rgb(135 96 161)",
               }}
             >
-              {price} دج
+              دج
+            </Typography>
+
+            {/* Current price */}
+            <Typography
+              id="price"
+              sx={{
+                fontWeight: "bold",
+                fontSize: "32px",
+                color: "rgb(135 96 161)",
+              }}
+            >
+              {price}
             </Typography>
           </Box>
           <Form id={id} />
