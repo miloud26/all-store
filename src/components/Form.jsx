@@ -1803,7 +1803,6 @@ const wilayaInfo = wilayaCommuneInfo.map((item) => {
 });*/
 
 export default function Form({ id }) {
-  const TOKEN = process.env.REACT_APP_TELEGRAM_TOKEN;
   const [btnDisebled, setBtnDisebled] = useState(true);
 
   const [purchaise, setPurchaise] = useState(false);
@@ -1821,7 +1820,7 @@ export default function Form({ id }) {
   //const [delevry, setDelevery] = useState(0);
   const phoneInput = useRef(null);
 
-  const { clr, size, price, delevery, url } = data.filter(
+  const { clr, size, price, delevery, url, hashprice } = data.filter(
     (item) => item.id === id,
   )[0];
 
@@ -1829,18 +1828,6 @@ export default function Form({ id }) {
     wilayaCommuneInfo.filter((item) => item.name === wilaya)[0],
   );
 
-  async function sendTelegramOrder() {
-    await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        chat_id: 5591540987,
-        text: `New Order 🔥 \n${document.getElementById("title")?.innerHTML}`,
-      }),
-    });
-  }
   /*  useEffect(() => {
     const price = priceDelevry.filter((item) => item.name === wilaya)[0]?.del;
     setDelevery(price);
@@ -1937,7 +1924,6 @@ export default function Form({ id }) {
           expire: new Date().getTime() + 24 * 60 * 60 * 1000,
         }),
       );
-      sendTelegramOrder();
     } catch (error) {
       console.log(error);
     }
@@ -2164,17 +2150,22 @@ export default function Form({ id }) {
                     marginBottom: "10px",
                   }}
                 >
-                  <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
-                    {"سعر التوصيل"}
-                  </Typography>
-                  <Typography
-                    id="priceDelevery"
-                    sx={{ fontWeight: "bold", fontSize: "22px" }}
-                  >
-                    {delevery.trim() !== "" && !isNaN(Number(delevery))
-                      ? `${delevery} دج`
-                      : `${delevery}`}
-                  </Typography>
+                  {delevery && (
+                    <>
+                      {" "}
+                      <Typography sx={{ fontWeight: "bold", fontSize: "22px" }}>
+                        {"سعر التوصيل"}
+                      </Typography>
+                      <Typography
+                        id="priceDelevery"
+                        sx={{ fontWeight: "bold", fontSize: "22px" }}
+                      >
+                        {delevery.trim() !== "" && !isNaN(Number(delevery))
+                          ? `${delevery} دج`
+                          : `${delevery}`}
+                      </Typography>
+                    </>
+                  )}
                 </Box>
                 <Box
                   sx={{

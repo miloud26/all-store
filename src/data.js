@@ -205,4 +205,19 @@ export const data = [
     themImg: "https://i.ibb.co/qY0nv5Gt/2.webp",
     url: "https://script.google.com/macros/s/AKfycby6EyFO-EdJauXWbgfcDeP_avpSvLsXLivIvtcNujpZ4575jPYhlO1q1UVAtb4MzgWl/exec",
   },
+  {
+    id: "l-17",
+    name: "كريم الصدفية",
+    slug: "",
+    phone: "",
+    hashprice: "",
+    price: "2300",
+    delevery: "",
+    clr: [],
+    size: [],
+    descImag1: "https://i.ibb.co/Tqw7q1KJ/output.webp",
+    themImg:
+      "https://i0.wp.com/www.tova-dz.com/wp-content/uploads/2026/05/ChatGPT-WPD-tova.webp?resize=500,500&ssl=1",
+    url: "https://script.google.com/macros/s/AKfycby6EyFO-EdJauXWbgfcDeP_avpSvLsXLivIvtcNujpZ4575jPYhlO1q1UVAtb4MzgWl/exec",
+  },
 ];
