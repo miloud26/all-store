@@ -1820,7 +1820,7 @@ export default function Form({ id }) {
   //const [delevry, setDelevery] = useState(0);
   const phoneInput = useRef(null);
 
-  const { clr, size, price, delevery, url, hashprice } = data.filter(
+  const { clr, size, price, delevery, url } = data.filter(
     (item) => item.id === id,
   )[0];
 
