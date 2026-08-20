@@ -218,6 +218,6 @@ export const data = [
     descImag1: "https://i.ibb.co/Tqw7q1KJ/output.webp",
     themImg:
       "https://i0.wp.com/www.tova-dz.com/wp-content/uploads/2026/05/ChatGPT-WPD-tova.webp?resize=500,500&ssl=1",
-    url: "https://script.google.com/macros/s/AKfycby6EyFO-EdJauXWbgfcDeP_avpSvLsXLivIvtcNujpZ4575jPYhlO1q1UVAtb4MzgWl/exec",
+    url: "https://script.google.com/macros/s/AKfycbwGDsO5Kx_g6ufLw6-XCMEcm5ripHuOokkRvi2Gz7vt0uetV6T-iOTT-heZJg9fHThkcw/exec",
   },
 ];
