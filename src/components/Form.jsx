@@ -1836,25 +1836,6 @@ export default function Form({ id }) {
   const handleModel = (e) => {
     e.target.classList.toggle("valid");
   };
-  const isMakeOrder = JSON.parse(localStorage.getItem("makeOrder"));
-
-  useEffect(() => {
-    if (isMakeOrder) {
-      if (isMakeOrder.expire < new Date().getTime()) {
-        localStorage.removeItem("makeOrder");
-      }
-    }
-    if (isMakeOrder?.value === 1) {
-      setTimeout(() => {
-        setPurchaise(true);
-        window.scrollTo({
-          top: 500,
-          behavior: "smooth", // Smooth scrolling animation
-        });
-      }, 1200);
-      return;
-    }
-  }, [isMakeOrder]);
 
   useEffect(() => {
     const regex = /^[5-7]\d{8}$/;
@@ -1916,14 +1897,6 @@ export default function Form({ id }) {
         top: 500,
         behavior: "smooth", // Smooth scrolling animation
       });
-
-      localStorage.setItem(
-        "makeOrder",
-        JSON.stringify({
-          value: 1,
-          expire: new Date().getTime() + 24 * 60 * 60 * 1000,
-        }),
-      );
     } catch (error) {
       console.log(error);
     }
