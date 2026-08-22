@@ -220,4 +220,20 @@ export const data = [
       "https://i0.wp.com/www.tova-dz.com/wp-content/uploads/2026/05/ChatGPT-WPD-tova.webp?resize=500,500&ssl=1",
     url: "https://script.google.com/macros/s/AKfycbwGDsO5Kx_g6ufLw6-XCMEcm5ripHuOokkRvi2Gz7vt0uetV6T-iOTT-heZJg9fHThkcw/exec",
   },
+  {
+    id: "l-18",
+    name: "كابل شحن USB-C مغناطيسي للساعة والهاتف",
+    slug: "",
+    phone: "",
+    hashprice: "5600",
+    price: "5200",
+    delevery: "600",
+    clr: [],
+    size: [],
+    descImag1:
+      "https://i.ibb.co/F1bsKqG/Chat-GPT-Image-Aug-22-2026-01-43-57-AM.webp",
+    themImg:
+      "https://i.ibb.co/M5NW7K9M/Whats-App-Image-2026-08-22-at-01-13-14.jpg",
+    url: "https://script.google.com/macros/s/AKfycbwGDsO5Kx_g6ufLw6-XCMEcm5ripHuOokkRvi2Gz7vt0uetV6T-iOTT-heZJg9fHThkcw/exec",
+  },
 ];
