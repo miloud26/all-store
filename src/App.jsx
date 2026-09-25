@@ -15,6 +15,7 @@ import Page15 from "./Page15.jsx";
 import Page16 from "./Page16.jsx";
 import Page17 from "./Page17.jsx";
 import Page18 from "./Page18.jsx";
+import Page19 from "./Page19.jsx";
 
 const Page01 = lazy(() => import("./Page01.jsx"));
 const Page02 = lazy(() => import("./Page02.jsx"));
@@ -60,6 +61,7 @@ const App = () => {
         <Route path="/products/page16" element={<Page16 />} />
         <Route path="/products/page17" element={<Page17 />} />
         <Route path="/products/page18" element={<Page18 />} />
+        <Route path="/products/page19" element={<Page19 />} />
       </Routes>
     </Suspense>
   );

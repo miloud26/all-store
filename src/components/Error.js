@@ -11,8 +11,8 @@ const Error = () => {
         alignItems: "center",
         justifyContent: "center",
         minHeight: "100vh",
-        backgroundColor: "#f7f7f7",
-        color: "blue",
+        backgroundColor: "transparent",
+        color: "#17191c",
         textAlign: "center",
         padding: 3,
         "@media(max-width:1900px)": {
@@ -22,8 +22,8 @@ const Error = () => {
     >
       <Box
         sx={{
-          backgroundColor: "#ff4d4d",
-          borderRadius: "50%",
+          backgroundColor: "#17191c",
+          borderRadius: "24px",
           padding: 3,
           marginBottom: 3,
         }}
@@ -33,7 +33,7 @@ const Error = () => {
 
       <Typography
         variant="h4"
-        sx={{ fontWeight: "bold", color: "#ff4d4d", marginBottom: 2 }}
+        sx={{ fontWeight: "bold", color: "#17191c", marginBottom: 2 }}
       >
         Oops! Something Went Wrong
       </Typography>
@@ -47,10 +47,10 @@ const Error = () => {
         <Button
           variant="contained"
           sx={{
-            backgroundColor: "#ff4d4d",
+            backgroundColor: "#17191c",
             color: "white",
             "&:hover": {
-              backgroundColor: "#e04343",
+              backgroundColor: "#2b2e33",
             },
           }}
         >

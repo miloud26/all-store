@@ -236,4 +236,18 @@ export const data = [
       "https://i.ibb.co/M5NW7K9M/Whats-App-Image-2026-08-22-at-01-13-14.jpg",
     url: "https://script.google.com/macros/s/AKfycbwGDsO5Kx_g6ufLw6-XCMEcm5ripHuOokkRvi2Gz7vt0uetV6T-iOTT-heZJg9fHThkcw/exec",
   },
+  {
+    id: "l-19",
+    name: "سماد ألفا-دور العضوي المركب NPK 15/15/15 + TE – تغذية متكاملة لمحاصيلك",
+    slug: "",
+    phone: "",
+    hashprice: "9900",
+    price: "8900",
+    delevery: "",
+    clr: [],
+    size: [],
+    descImag1: "https://i.ibb.co/bg9d53HN/2.webp",
+    themImg: "https://i.ibb.co/CgbMLVf/1.webp",
+    url: "https://script.google.com/macros/s/AKfycbwGDsO5Kx_g6ufLw6-XCMEcm5ripHuOokkRvi2Gz7vt0uetV6T-iOTT-heZJg9fHThkcw/exec",
+  },
 ];

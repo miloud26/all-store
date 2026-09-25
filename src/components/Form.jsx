@@ -1808,7 +1808,7 @@ export default function Form({ id }) {
   const [purchaise, setPurchaise] = useState(false);
 
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("0777651022");
+  const [phone, setPhone] = useState("");
   const [wilaya, setWilaya] = useState("");
   const [adress, setAdress] = useState("");
   const [quantity, setQuantity] = useState("1");
@@ -1840,13 +1840,8 @@ export default function Form({ id }) {
   useEffect(() => {
     const regex = /^[5-7]\d{8}$/;
     if (!regex.test(phone.slice(1))) {
-      setCorrectNumber(true);
-      window.scrollTo({
-        top: 500,
-        behavior: "smooth", // Smooth scrolling animation
-      });
+      setCorrectNumber(phone.length > 0);
       setBtnDisebled(true);
-      document.querySelector('input[placeholder="رقم الهاتف"]').focus();
     } else {
       setBtnDisebled(false);
       setCorrectNumber(false);
@@ -1955,6 +1950,7 @@ export default function Form({ id }) {
             </Box>
           ) : (
             <form
+              className="order-form"
               style={{
                 border: "3px rgba(107, 107, 224, 0.623) solid",
                 borderRadius: "8px",
@@ -1965,6 +1961,7 @@ export default function Form({ id }) {
               onSubmit={handleSubmitOrder}
             >
               <Box
+                className="order-summary"
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -2017,6 +2014,7 @@ export default function Form({ id }) {
                 )}
               </Box>
               <Box
+                className="product-options product-colors"
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -2174,6 +2172,7 @@ export default function Form({ id }) {
               >
                 {clr.map((item, i) => (
                   <Box
+                    className="product-option"
                     key={i}
                     onClick={(e) => {
                       handleModel(e);
@@ -2199,6 +2198,7 @@ export default function Form({ id }) {
               </Box>
 
               <Box
+                className="product-options product-sizes"
                 sx={{
                   display: "grid",
                   gridTemplateColumns: "repeat(5, max-content)",
@@ -2209,6 +2209,7 @@ export default function Form({ id }) {
               >
                 {size.map((item, i) => (
                   <Box
+                    className="product-option"
                     key={i}
                     onClick={(e) => {
                       handleModel(e);
@@ -2232,6 +2233,7 @@ export default function Form({ id }) {
               </Box>
 
               <Box
+                className="order-actions"
                 sx={{
                   marginTop: "20px",
                   display: "flex",
@@ -2240,6 +2242,7 @@ export default function Form({ id }) {
                 }}
               >
                 <Button
+                  className="submit-order"
                   disabled={btnDisebled === true ? true : false}
                   sx={{
                     fontWeight: "bold",
@@ -2257,6 +2260,7 @@ export default function Form({ id }) {
                   {"اشتري الان"}
                 </Button>
                 <Box
+                  className="quantity-wrap"
                   sx={{
                     width: "45%",
                     display: "flex",
@@ -2267,6 +2271,7 @@ export default function Form({ id }) {
                   }}
                 >
                   <Button
+                    className="quantity-control"
                     variant="contained"
                     sx={{
                       fontWeight: "bold",
