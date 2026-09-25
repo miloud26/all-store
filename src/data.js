@@ -243,7 +243,7 @@ export const data = [
     phone: "",
     hashprice: "9900",
     price: "8900",
-    delevery: "",
+    delevery: "مجاني",
     clr: [],
     size: [],
     descImag1: "https://i.ibb.co/bg9d53HN/2.webp",
