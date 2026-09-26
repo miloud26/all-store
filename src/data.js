@@ -248,6 +248,6 @@ export const data = [
     size: [],
     descImag1: "https://i.ibb.co/bg9d53HN/2.webp",
     themImg: "https://i.ibb.co/CgbMLVf/1.webp",
-    url: "https://script.google.com/macros/s/AKfycbwLYv_gtvqZITL2-TykugefFpnCyCeJhR5fbyaXYrRS6x66yBoHF8FLF7iNuEE0lOklzQ/exec",
+    url: "https://script.google.com/macros/s/AKfycbxGywTqboJ6fAGYzVniMwvwGS3qU5Ca1pPEhCZCiCNrxr2KWpgKwGz1DygCGNk7hdWitA/exec",
   },
 ];
